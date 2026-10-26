@@ -1,0 +1,6 @@
+outputs/
+node_modules/
+.DS_Store
+reference-demo-portfolio/
+.openai/
+dist/
