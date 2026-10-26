@@ -20,6 +20,7 @@ Open `http://localhost:4173/`. The `dist/` directory contains the static deploya
 - Scroll progress, active navigation, subtle section reveals, responsive hover details, and reduced-motion support
 - Animated "From tokens to decisions" hero banner with cycling retrieval/reasoning/results emphasis
 - Project concept panels, measured-impact strip, project jump index, and skill-domain cards
+- Concise case-study summaries with expandable methods/results and an expandable full toolkit
 - Contact form opens the visitor's email client with the message filled in
 - Resume download from `assets/aditya-bisht-resume.pdf`
 
