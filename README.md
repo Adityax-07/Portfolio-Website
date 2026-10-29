@@ -24,7 +24,7 @@ Open `http://localhost:4173/`. The `dist/` directory contains the static deploya
 - Contact form opens the visitor's email client with the message filled in
 - Resume download from `assets/aditya-bisht-resume.pdf`
 
-The original sticker assets and portrait cutout were not available. The SVG stickers are recreations, and the portrait loads from Aditya's public GitHub profile. The AgentBench trace is an illustrative visualization, not captured runtime telemetry.
+The original sticker assets were not available, so the SVG stickers are recreations. The identity header is text-led and does not load a profile photo. The AgentBench trace is an illustrative visualization, not captured runtime telemetry.
 
 The separate [Demo-Portfolio](https://github.com/Adityax-07/Demo-Portfolio) checkout was used for design research and is excluded from this repository. See `REFERENCE_NOTES.md` for the patterns adapted into this site.
 

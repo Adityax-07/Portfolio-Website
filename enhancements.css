@@ -34,14 +34,17 @@ body::before{content:"";position:fixed;inset:0;z-index:60;pointer-events:none;op
 .hero-art .sticker:active{scale:1.11}
 .sticky-note{transition:transform .5s var(--ease-out),box-shadow .5s var(--ease-out)}
 .sticky-note:hover{transform:rotate(-2deg) translateY(-6px);box-shadow:-10px -10px 0 rgba(255,255,255,.12),0 18px 30px rgba(0,0,0,.35)}
-.identity{background:radial-gradient(ellipse 70% 100% at 88% 52%,rgba(184,239,97,.035),transparent 70%)}
+.identity{display:block;height:auto;min-height:222px;background:radial-gradient(ellipse 70% 100% at 88% 52%,rgba(184,239,97,.035),transparent 70%)}
+.identity-copy{padding:31px 36px 32px}
+.identity-eyebrow{display:flex;align-items:center;justify-content:space-between;gap:16px;color:var(--green);font:700 12px/1.4 'DM Mono',monospace}
+.identity-eyebrow .mono{font-size:11px;font-weight:400}
+.identity h2{font-size:clamp(48px,7.4vw,76px);letter-spacing:-.055em;line-height:1;margin:15px 0 10px}
+.identity h2 span{color:var(--green)}
+.identity p{font-size:16px;line-height:1.45}
+.identity-meta{margin-top:20px}
 .identity h2{transition:text-shadow .35s ease}
 .identity:hover h2{text-shadow:0 0 35px rgba(184,239,97,.12)}
-.portrait{isolation:isolate}
-.portrait::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(145deg,transparent 35%,rgba(184,239,97,.08));mix-blend-mode:screen}
-.portrait img{z-index:1}
-.hello-tag{animation:tag-bob 4s ease-in-out infinite}
-@keyframes tag-bob{0%,100%{translate:0 0}50%{translate:0 -4px}}
+.availability .availability-mark{display:grid;place-items:center;width:39px;height:39px;flex:none;border:1px solid rgba(184,239,97,.4);border-radius:7px;background:#1d2815;color:var(--green);font:800 14px/1 'DM Sans',sans-serif;letter-spacing:-1px}
 .section-bar{position:relative;overflow:hidden}
 .section-bar::before{content:attr(data-index);font:10px 'DM Mono',monospace;color:var(--green);margin-right:12px;opacity:.8}
 .section-bar h2{margin-right:auto}
@@ -98,7 +101,7 @@ body::before{content:"";position:fixed;inset:0;z-index:60;pointer-events:none;op
 @media(max-width:760px){.banner-copy{top:77px;padding:20px 10px}.banner-headline{font-size:clamp(25px,5.4vw,38px);letter-spacing:.1em}.banner-sequence{font-size:clamp(12px,3vw,19px);letter-spacing:.14em;gap:clamp(7px,1.1vw,12px)}.hero-seal{top:165px}}
 @media(max-width:480px){.banner-copy{top:76px;padding:13px 5px}.banner-headline{font-size:clamp(23px,6vw,29px);letter-spacing:.035em}.banner-sequence{font-size:clamp(11px,3.25vw,15px);letter-spacing:.1em;gap:5px;margin-top:10px}.banner-sequence span::after{bottom:-4px}.banner-copy::before{inset:-8px 0}.hero-seal{top:169px}}
 @media(hover:none){.hero-art .sticker:hover{scale:1;filter:drop-shadow(0 5px 1px rgba(0,0,0,.6))}.case-study:hover{transform:none}}
-@media(prefers-reduced-motion:reduce){.hello-tag,.trace.is-visible .trace-row .bar,.banner-headline,.banner-sequence{animation:none!important}.banner-sequence span{transition:none}.reveal-ready{opacity:1;translate:none}.scroll-progress,.hero-art .sticker,.case-study,.primary-button,.social-icon{transition:none!important}body::before{display:none}}
+@media(prefers-reduced-motion:reduce){.trace.is-visible .trace-row .bar,.banner-headline,.banner-sequence{animation:none!important}.banner-sequence span{transition:none}.reveal-ready{opacity:1;translate:none}.scroll-progress,.hero-art .sticker,.case-study,.primary-button,.social-icon{transition:none!important}body::before{display:none}}
 
 /* Keep the headline in its own quiet band between the sticker clusters. */
 .hero-art{height:390px}
@@ -136,3 +139,8 @@ body::before{content:"";position:fixed;inset:0;z-index:60;pointer-events:none;op
 @media(max-width:760px){.banner-headline{font-size:clamp(27px,5vw,35px)}.hero-atmosphere::before{left:-200px}.hero-atmosphere::after{right:-220px}}
 @media(max-width:480px){.banner-headline{font-size:clamp(22px,6vw,26px);letter-spacing:.018em}.banner-copy::after{bottom:-22px;width:35%}.hero-atmosphere::before{left:-265px;top:80px}.hero-atmosphere::after{right:-265px}}
 @media(prefers-reduced-motion:reduce){.hero-atmosphere::before,.hero-atmosphere::after,.hero-scan,.banner-headline span,.banner-copy::after{animation:none!important}.hero-scan{display:none}}
+
+/* A text-led identity keeps the introduction personal without a portrait. */
+.light .availability .availability-mark{background:#eef5e3;color:#385a32;border-color:#c3d5ad}
+@media(max-width:760px){.identity{min-height:0}.identity-copy{padding:28px 24px 30px}.identity h2{font-size:clamp(42px,8vw,58px);letter-spacing:-.05em}.identity p{font-size:14px}.identity-meta{display:flex;flex-wrap:wrap;gap:9px 16px;margin-top:16px}.identity-meta .mono{display:inline;margin-top:0}.status{font-size:10px}}
+@media(max-width:480px){.identity-copy{padding:25px 20px 28px}.identity-eyebrow .mono{display:none}.identity h2{font-size:clamp(37px,10vw,46px);margin:12px 0}.identity p{font-size:13px}.identity-meta .mono{font-size:10px}}
