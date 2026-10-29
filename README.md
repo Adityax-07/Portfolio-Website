@@ -20,10 +20,12 @@ Open `http://localhost:4173/`. The `dist/` directory contains the static deploya
 - Scroll progress, active navigation, subtle section reveals, responsive hover details, and reduced-motion support
 - Animated "From tokens to decisions" hero banner with cycling retrieval/reasoning/results emphasis
 - Project concept panels, measured-impact strip, project jump index, and skill-domain cards
-- Concise case-study summaries with expandable methods/results and an expandable full toolkit
+- Concise case-study summaries with expandable methods/results, visible tech logo chips, and an expandable full toolkit
 - Contact form opens the visitor's email client with the message filled in
 - Resume download from `assets/aditya-bisht-resume.pdf`
 
 The original sticker assets and portrait cutout were not available. The SVG stickers are recreations, and the portrait loads from Aditya's public GitHub profile. The AgentBench trace is an illustrative visualization, not captured runtime telemetry.
 
 The separate [Demo-Portfolio](https://github.com/Adityax-07/Demo-Portfolio) checkout was used for design research and is excluded from this repository. See `REFERENCE_NOTES.md` for the patterns adapted into this site.
+
+The local technology SVGs in `assets/tech/` were obtained from [Iconify's Logos and Simple Icons collections](https://iconify.design/icon-sets/), so the stack renders without a runtime icon service.
